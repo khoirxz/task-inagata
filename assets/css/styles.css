@@ -377,13 +377,14 @@ a {
 .article-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 .body-article {
   padding: 25px 30px 10px 30px;
 }
 .thumb-article > img {
-  max-width: auto;
+  width: 100%;
   height: 190px;
   object-fit: cover;
 }
@@ -513,11 +514,11 @@ footer {
   font-size: 14px;
   line-height: 1.43;
 }
-.footer-contact {
+/* .footer-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 .social-icons {
   display: flex;
 }
@@ -526,3 +527,84 @@ footer {
   cursor: pointer;
 }
 /* END FOOTER */
+
+/* RESPONSIVE VIEW */
+
+/* LAPTOP  */
+@media all and (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 600px 1fr;
+  }
+  .about-row {
+    grid-template-columns: 500px 1fr;
+  }
+  .about-image {
+    max-width: 500px;
+    max-height: 335px;
+    display: block;
+    margin: 0 auto;
+  }
+  .article-container {
+    grid-template-columns: repeat(2, 300px);
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+}
+
+/* TABLET */
+@media all and (max-width: 768px) {
+  /* hero */
+  .hero-container {
+    grid-template-columns: 1fr;
+    min-height: 80vh;
+  }
+  .hero-img-container {
+    display: none;
+  }
+  .hero-text-container {
+    margin: 10px 40px;
+  }
+  .about-row {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    display: none;
+  }
+  .services {
+    grid-template-columns: repeat(1, 260px);
+  }
+  .footer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px;
+    column-gap: 90px;
+    justify-items: start;
+  }
+  .footer-content {
+    padding: 0 2rem;
+  }
+}
+/* MOBILE */
+@media all and (max-width: 425px) {
+  .title {
+    text-align: center;
+  }
+  .divider {
+    margin-top: 3rem;
+  }
+  .navbar-top,
+  .bottom-bar {
+    display: none;
+  }
+  .download-section {
+    grid-template-columns: 1fr;
+  }
+  .article-container {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+  .footer-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
