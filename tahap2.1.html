@@ -12,11 +12,23 @@
       }
       .container {
         width: 100%;
-        margin-inline-start: auto;
-        margin-inline-end: auto;
-        max-width: 100vh;
+        min-height: 100vh;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 150px);
+        align-content: center;
+        justify-content: center;
+        gap: 140px;
+      }
+      .container > div {
+        position: relative;
+        width: 150px;
+        height: 150px;
+      }
+      .single-box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        opacity: 0.5;
       }
       .box {
         width: 100px;
@@ -44,12 +56,19 @@
         position: absolute;
         transform: translate(50%, 50%);
       }
+      @media only all and (max-width: 800px) {
+        .container {
+          margin: 2.3rem 0;
+          grid-template-columns: repeat(1, 1fr);
+          justify-items: center;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div>
-        <div class="box"></div>
+        <div class="single-box"></div>
       </div>
       <div>
         <div class="box-cirle">
