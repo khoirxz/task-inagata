@@ -18,7 +18,11 @@
       }
       body,
       button {
-        font-family: "Inter", sans-serif;
+        font-family: "Segoe UI", "Inter", sans-serif;
+      }
+      p {
+        margin: 0.6rem 0 0 0;
+        color: #6d6d6d;
       }
       .container {
         width: 75%;
@@ -34,10 +38,10 @@
         column-gap: 20px;
       }
       .btn {
-        font-weight: 300;
-        padding: 10px 24px;
+        font-weight: 400;
+        padding: 7px 15px;
         cursor: pointer;
-        min-width: 125px;
+        min-width: 110px;
       }
       .btn-default {
         color: #0ea74d;
@@ -46,20 +50,24 @@
         border: none;
         /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
           rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-        border: 3px solid #efefef;
+        border: 2.5px solid #efefef;
         border-radius: 6px;
       }
+      /* :hover */
       .is-hover:hover {
-        border: 3px solid #11b843;
+        border: 2.5px solid #11b843;
       }
+      /* :focus */
       .is-focus:focus {
-        border: 3px solid #11b843;
+        border: 2.5px solid #11b843;
         background-color: #11b843;
         color: #fff;
       }
+      /* :disable */
       button:disabled {
-        border: 3px solid #11b843;
+        border: 2.5px solid #11b843;
         opacity: 0.5;
+        cursor: not-allowed;
       }
       @media only all and (max-width: 800px) {
         .type-button {
@@ -81,22 +89,20 @@
     <div class="container">
       <div class="type-button">
         <div>
-          <p>Defaul button :</p>
           <button class="btn btn-default">Success</button>
+          <p>Defaul</p>
         </div>
         <div>
-          <p>Hover button :</p>
           <button class="btn btn-default is-hover">Hover</button>
+          <p>:hover</p>
         </div>
         <div>
-          <p>Focused button :</p>
           <button class="btn btn-default is-hover is-focus">Pressed</button>
+          <p>:focus</p>
         </div>
         <div>
-          <p>Disable button :</p>
-          <button class="btn btn-default is-hover is-focus" disabled>
-            Disable
-          </button>
+          <button class="btn btn-default" disabled>Disable</button>
+          <p>:disable</p>
         </div>
       </div>
     </div>
