@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test 2.1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        max-width: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        opacity: 0.5;
+      }
+      /* .box-cirle {
+        hanya bisa berkerja dengan `top` & `left`
+        position: relative;
+      } */
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        opacity: 0.5;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(50%, 50%);
+      }
+      .box2 {
+        position: absolute;
+      }
+      .box3 {
+        position: absolute;
+        transform: translate(50%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box-cirle">
+          <div class="box box2"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div>
+        <div class="box-box">
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
