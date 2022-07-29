@@ -570,6 +570,9 @@ footer {
   .about-image {
     display: none;
   }
+  .paragraph {
+    text-indent: 0.5rem;
+  }
   .services {
     grid-template-columns: repeat(1, 260px);
   }
