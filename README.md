@@ -1,6 +1,7 @@
 # TEST PKL INAGTA
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25a1bc67-b2e1-429c-9be1-9ac28010545f/deploy-status)](https://app.netlify.com/sites/task-inagata/deploys)
+
 tugas tahap pertama :
 
 - [lihat tugas](https://task-inagata.netlify.app/)
