@@ -10,6 +10,7 @@
         margin: 0;
         padding: 0;
       }
+      /* container atau "row" dari setiap "col" */
       .container {
         width: 100%;
         min-height: 100vh;
@@ -19,7 +20,7 @@
         justify-content: center;
         gap: 140px;
       }
-      .container > div {
+      .col {
         position: relative;
         width: 150px;
         height: 150px;
@@ -67,16 +68,19 @@
   </head>
   <body>
     <div class="container">
-      <div>
+      <!-- single box -->
+      <div class="col">
         <div class="single-box"></div>
       </div>
-      <div>
+      <!-- box dan circle -->
+      <div class="col">
         <div class="box-cirle">
           <div class="box box2"></div>
           <div class="circle"></div>
         </div>
       </div>
-      <div>
+      <!-- box dan box -->
+      <div class="col">
         <div class="box-box">
           <div class="box box2"></div>
           <div class="box box3"></div>
